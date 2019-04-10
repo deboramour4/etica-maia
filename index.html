@@ -2,48 +2,71 @@
 <html>
 <head>
 	<title>Os maias - Ética e Política Autoral</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/jquery_ui/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/jquery_ui/jquery-ui.structure.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/jquery_ui/jquery-ui.theme.min.css">
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<main>
-		<section>
+		<section class="screen-size-small">
+			<h1>Tamanho da tela pequeno demais</h1>
+			<p>Use um dispositivo maior para acessar o infográfico.</p>
+		</section>
+
+		<section id="inicio">
 			<div class="enfeite top"></div>
 			<div class="text">
 			<img class="civilizacao" src="img/civilizacao.png">
 			<img class="maia" src="img/maia.png">
 			<p>Análise das características gerais do povo maia.</p>
 			<p>Clique nos botões do mapa para entender mais sobre eles</p>
-			<ul>Equipe
-				<li>Débora Moura</li>
-				<li>Sarah Myrlane</li>
-				<li>Vinícius Castelo</li>
-			</ul>
+			<div class="equipe">
+				<ul>Equipe
+					<li>Débora Moura</li>
+					<li>Sarah Myrlane</li>
+					<li>Vinícius Castelo</li>
+				</ul>
+			</div>
 			</div>
 			<div class="map">
 				<img class="map-background centered" src="img/mapa/mapa.png">
 
+				<button class="costumes"><span>Costumes</span></button>
+				<button class="pensadores"><span>Pensadores</span></button>
+				<button class="expansao"><span>Expansão</span></button>
+				<button class="historia"><span>História</span></button>
+				<button class="etica"><span>Ética</span></button>
+				<button class="queda"><span>Queda</span></button>
+				<button class="conclusao"><span>Conclusão</span></button>
+				<button class="bibliografia"><span>Bibliografia </span></button>
+
 				<img class="map-topic-imgs costumes" src="img/mapa/costumes.png">
-				<button id="costumes">Costumes</button>
 				<img class="map-topic-imgs pensadores" src="img/mapa/pensadores.png">
-				<button id="pensadores">Pensadores</button>
 				<img class="map-topic-imgs expansao" src="img/mapa/expansao.png">
-				<button id="expansao">Expansão</button>
 				<img class="map-topic-imgs historia" src="img/mapa/historia.png">
-				<button id="historia">História</button>
 				<img class="map-topic-imgs etica-1" src="img/mapa/etica-1.png">
 				<img class="map-topic-imgs etica-2" src="img/mapa/etica-2.png">
-				<button id="etica-2">Ética</button>
 				<img class="map-topic-imgs queda" src="img/mapa/queda.png">
-				<button id="queda">Queda</button>
 				<img class="map-topic-imgs conclusao" src="img/mapa/conclusao.png">
-				<button id="conclusao">Conclusão</button>
 				<img class="map-topic-imgs bibliografia" src="img/mapa/bibliografia.png">
-				<button id="bibliografia"></button>
 			</div>
-			<div class="enfeite bottom">Bibliografia</div>
+			<div class="enfeite bottom"></div>
 		</section>
 	</main>
 
 </body>
+<script type="text/javascript" src="vendor/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="vendor/jquery_ui/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="vendor/html2canvas/html2canvas.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </html>
