@@ -12,7 +12,27 @@ $(document).ready(function() {
   }*/
 
   toggleSoundSetup()
+
+  // Toggle fullscreen
+    $('#myModal').modal('show')
+    $("#openFullscreen").click(function () {
+      openFullscreen()
+      $('#myModal').modal('hide')
+    })
 });
+
+ function openFullscreen() {
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { 
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+  }
 
 function toggleSoundSetup() {
     // Toggle sound
@@ -69,6 +89,38 @@ function expansao() {
   }
 // historia =================================
 function historia() {
+    $("button.back").click(function () {
+      updateSectionAJAX("index")
+    })
+
+    toggleSoundSetup()
+  }
+// conclusao =================================
+function conclusao() {
+    $("button.back").click(function () {
+      updateSectionAJAX("index")
+    })
+
+    toggleSoundSetup()
+  }
+// bibliografia =================================
+function bibliografia() {
+    $("button.back").click(function () {
+      updateSectionAJAX("index")
+    })
+
+    toggleSoundSetup()
+  }
+// pensadores =================================
+function pensadores() {
+    $("button.back").click(function () {
+      updateSectionAJAX("index")
+    })
+
+    toggleSoundSetup()
+  }
+// queda =================================
+function queda() {
     $("button.back").click(function () {
       updateSectionAJAX("index")
     })
