@@ -1,13 +1,30 @@
-if ($("#inicio").length) {
-  inicio()
+if ($("#index").length) {
+  index()
 }
 
 $(document).ready(function() {
+  var aspectRatioProp = window.innerWidth/window.innerHeight
 
+  /*if (aspectRatioProp >= 1.7){ 
+    $("main").css("padding-top", "56.25%")
+  } else {
+    $("main").css("padding-top", "79.25%")
+  }*/
+
+  toggleSoundSetup()
 });
 
-// inicio =================================
-function inicio() {
+function toggleSoundSetup() {
+    // Toggle sound
+    $(".sound").click(function () {
+      $(this).toggleClass("sound")
+      $(this).toggleClass("mute")
+      console.log("Inserir logica de mutar o som, aqui!")
+    })
+  }
+
+// index =================================
+function index() {
     $("button.costumes").click(function () {
       updateSectionAJAX("costumes")
     })
@@ -36,30 +53,27 @@ function inicio() {
 
 // costumes =================================
 function costumes() {
-    $("button.costumes").click(function () {
-      updateSectionAJAX("costumes")
+    $("button.back").click(function () {
+      updateSectionAJAX("index")
     })
-    $("button.pensadores").click(function () {
-      updateSectionAJAX("pensadores")
+
+    toggleSoundSetup()
+  }
+// expansao =================================
+function expansao() {
+    $("button.back").click(function () {
+      updateSectionAJAX("index")
     })
-    $("button.expansao").click(function () {
-      updateSectionAJAX("expansao")
+
+    toggleSoundSetup()
+  }
+// historia =================================
+function historia() {
+    $("button.back").click(function () {
+      updateSectionAJAX("index")
     })
-    $("button.historia").click(function () {
-      updateSectionAJAX("historia")
-    })
-    $("button.etica").click(function () {
-      updateSectionAJAX("etica")
-    })
-    $("button.queda").click(function () {
-      updateSectionAJAX("queda")
-    })
-    $("button.conclusao").click(function () {
-      updateSectionAJAX("conclusao")
-    })
-    $("button.bibliografia").click(function () {
-      updateSectionAJAX("bibliografia")
-    })
+
+    toggleSoundSetup()
   }
 
 

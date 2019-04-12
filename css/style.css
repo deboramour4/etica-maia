@@ -1,19 +1,49 @@
 /*Cor do texto - 802A18
 Cor bot„o - 8B5E3C
 Cor do fundo gradiente - FFEFCD e BD9671*/
+@font-face {
+	font-family: maya;
+	src: url(../fonts/Maya.ttf);
+}
+@font-face {
+	font-family: mayan;
+	src: url(../fonts/Mayan.ttf);
+}
+@font-face {
+	font-family: souses-regular;
+	src: url(../fonts/Souses-Regular.ttf);
+}
+@font-face {
+	font-family: souses-bold;
+	src: url(../fonts/Souses-Bold.ttf);
+}
 
-@media only screen and (max-width: 600px) {
+::-webkit-scrollbar-track {
+  background-color: #fff7e8;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+  background-color: #fff7e8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8B5E3C;
+}
+
+@media (max-width: 600px) {
   .screen-size-small {
     display: block;
   }
 }
 
 body {
-	/*height: 100%;
+	height: 100%;
 	overflow:hidden;
 	margin: 0px;
 	list-style: none;
-	background-color: transparent;*/	
+	background-color: transparent;	
+	font-family: souses-regular;
 }
 
 html {
@@ -22,18 +52,16 @@ html {
 	background-color: #FFEFCD;
 	background-size: cover;
 	background-position: center;
-
-	height: 100%;
 }
 
-/*main {
+main {
 	position: relative;
 	width: 100%;
-	padding-top: 56.25%; /* 16:9 Aspect Ratio 
 	height: 90%;
-}*/
+	padding-top: 56.25%;
+}
 
-/*.centered {
+.centered {
 	position: absolute;          
 	left: 50%;                                  
 	top: 50%;
@@ -48,7 +76,7 @@ html {
 	position: absolute;                                           
 	top: 50%;
 	transform: translateY(-50%);
-}*/
+}
 .screen-size-small {
 	display: none;
 }
@@ -63,102 +91,13 @@ html {
 	position: absolute;
 	left: 0;
 }
-.equipe {
-	margin-top: 10%;
-	font-size: 1.5vw;
-
-}
-
-.top {
-	top: 1%;
-}
-
-.bottom{
-	bottom: 1%;
-}
-
+.top {top: 1%;}
+.bottom{ bottom: 1%;}
 .text {
-	position: absolute;
-    left: 5%;
-    top: 50%;
-	transform: translateY(-50%);
-    height: 80%;
-    width: 30%;
-    /*background-color: #fff;*/
     color: #802A18;
-    font-family: sans-serif;
     font-size: 2vw;
 }
-
-.text img {
-	width: 80%;
-}
-
-.map {
-	position: absolute;
-    right: 0;
-    top: 50%;
-	transform: translateY(-50%);
-    height: 90%;
-    width: 70%;
-    text-align: center;
-}
-
-.map-background {
-	height: 100%;
-	z-index: -100;
-}
-
-.map-topic-imgs {
-	height: 5vw;
-}
-
-.costumes {
-	position: absolute;
-	right: 38%;
-    top: 5%;
-}
-.pensadores {
-	position: absolute;
-	right: 42%;
-    top: 25%;
-}
-.expansao {
-	position: absolute;
-	left: 22%;
-    top: 21%;
-}
-.historia {
-	position: absolute;
-	left: 25%;
-    top: 35%;
-}
-.etica-1 {
-	position: absolute;
-	right: 49%;
-    top: 41%;
-}
-.etica-2 {
-	position: absolute;
-	right: 44%;
-    top: 45%;
-}
-.queda {
-	position: absolute;
-	left: 31%;
-    bottom: 37%;
-}
-.conclusao {
-	position: absolute;
-	right: 55%;
-    bottom: 22%;
-}
-.bibliografia {
-	position: absolute;
-	right: 44%;
-    bottom: 18%;
-}
-
+/* buttons ================================= */
 button {
 	background-color: #8B5E3C;
 	color: #fff;
@@ -168,9 +107,10 @@ button {
 	border-radius: 0.5vw;
 	border: none;
 	box-shadow: 0px 2px 2px 0px #333;
+	font-family: souses-regular;
 }
 
-button:hover {
+button:hover{
 	background-color: #802A18;
 }
 
@@ -205,6 +145,82 @@ button:hover span:after {
   opacity: 1;
   right: 0;
 }
+/* index ================================= */
+#index .equipe {
+	margin-top: 10%;
+	font-size: 1.5vw;
+}
+#index .text {
+	position: absolute;
+    left: 5%;
+    top: 50%;
+	transform: translateY(-50%);
+    height: 80%;
+    width: 30%;
+    font-size: 2vw;
+}
+#index .text img { width: 80%; }
+#index .map {
+	position: absolute;
+    right: 0;
+    top: 50%;
+	transform: translateY(-50%);
+    height: 90%;
+    width: 70%;
+    text-align: center;
+}
+#index .map-background {
+	height: 100%;
+	z-index: -100;
+}
+.map-topic-imgs {
+	height: 5vw;
+}
+.costumes {
+	position: absolute;
+	right: 38%;
+    top: 5%;
+}
+.pensadores {
+	position: absolute;
+	right: 42%;
+    top: 25%;
+}
+.expansao {
+	position: absolute;
+	left: 22%;
+    top: 21%;
+}
+.historia {
+	position: absolute;
+	left: 25%;
+    top: 35%;
+}
+.etica-1 {
+	position: absolute;
+	right: 49%;
+    top: 41%;
+}
+.etica-2 {
+	position: absolute;
+	right: 44%;
+    top: 45%;
+}
+.queda {
+	position: absolute;
+	left: 31%;
+    bottom: 38%;
+}
+.conclusao {
+	position: absolute;
+	right: 48%;
+    bottom: 28%
+}
+.bibliografia {
+	position: absolute;
+	right: 44%;
+    bottom: 18%;
+}
 
 button.costumes {
 	position: absolute;
@@ -234,7 +250,7 @@ button.etica {
 button.queda {
 	position: absolute;
 	left: 39%;
-    bottom: 39%;
+    bottom: 41%;
 }
 button.conclusao {
 	position: absolute;
@@ -245,4 +261,154 @@ button.bibliografia {
 	position: absolute;
 	left: 57%;
     bottom: 20%;
+}
+
+button.sound, button.mute, button.back {
+    border: 0px solid #fff !important;
+    padding: 2em 2em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: rgba(0,0,0,0);
+    outline: 0;
+    transition: 0.1s;
+    box-shadow: 0px 0px 0px 0px #000;
+
+    position: absolute;
+    top: 7%;
+    right: 1%;
+    z-index: 999
+  }
+
+button.sound:active, button.mute:active, button.back:active {
+	border: 5px solid #fff;
+	filter: opacity(.8);
+}
+button.sound:hover, button.mute:hover, button.back:hover {
+	box-shadow: 0px 0px 0px #fff;
+	transform: scale(1.05);
+}
+
+button.sound {background-image: url(../img/sound.png);}
+button.sound:hover{background-image: url(../img/sound-off.png);}
+button.mute {background-image: url(../img/sound-off.png);}
+button.mute:hover{background-image: url(../img/sound.png);}
+button.back {
+	background-image: url(../img/back.png);
+	left: 2%;
+}
+button + label {
+	position: absolute;
+	color: #333;
+	text-align: center;
+	left: 1%;
+	top: 15%;
+	font-size: 1.3vw;
+	font-family: souses-bold;
+	width: 7vw
+}
+
+.equipe {
+	background-color: #802A13;
+    color: #fff;
+}
+/* costumes ================================= */
+#costumes header img:first-child {
+	position: absolute;
+	top: 8%;
+	left: 10%;
+	width: 4vw;
+}
+#costumes header img:nth-child(2) {
+	position: absolute;
+	top: 7%;
+	left: 17%;
+	width: 18vw;
+}
+#costumes .text {
+	position: absolute;
+    left: 2%;
+    top: 19%;
+    height: 72%;
+    width: 90%;
+    font-size: 1.5vw;
+    overflow: auto;
+
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+	-moz-column-count: 2; /* Firefox */
+	column-count: 2;
+	-webkit-column-width: 50%; /* Chrome, Safari, Opera */
+	-moz-column-width: 50%; /* Firefox */
+	column-width: 50%;
+}
+/* expansao ================================= */
+#expansao header img:first-child {
+	position: absolute;
+	top: 8%;
+	left: 10%;
+	width: 7vw;
+}
+#expansao header img:nth-child(2) {
+	position: absolute;
+	top: 7%;
+	left: 19%;
+	width: 18vw;
+}
+#expansao .text {
+	position: absolute;
+    left: 5%;
+    top: 19%;
+    height: 72%;
+    width: 50%;
+    font-size: 1.5vw;
+    overflow: auto;
+}
+
+#expansao .map {
+	position: absolute;
+    right: 2%;
+    top: 19%;
+    height: 50%;
+    width: 40%;
+    font-size: 1.5vw;
+}
+
+#expansao #expansao-photos {
+    width: 100%;
+}
+/* historia ================================= */
+#historia header img:first-child {
+	position: absolute;
+	top: 8%;
+	left: 10%;
+	width: 4.5vw;
+}
+#historia header img:nth-child(2) {
+	position: absolute;
+	top: 7%;
+	left: 19%;
+	width: 18vw;
+}
+#historia .text {
+	position: absolute;
+    left: 5%;
+    top: 19%;
+    height: 72%;
+    width: 50%;
+    font-size: 1.5vw;
+    overflow: auto;
+}
+
+#historia .map {
+	position: absolute;
+    right: 2%;
+    top: 19%;
+    height: 72%;
+    width: 40%;
+    font-size: 1.5vw;
+}
+
+#historia iframe {
+    width: 100%;
+    height: 100%;
 }
