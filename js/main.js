@@ -105,6 +105,10 @@ function expansao() {
       updateSectionAJAX("index")
     })
 
+    $(".pensadores-link").click(function () {
+      updateSectionAJAX("pensadores")
+    })
+
     toggleSoundSetup()
   }
 // historia =================================
@@ -133,6 +137,8 @@ function bibliografia() {
   }
 // pensadores =================================
 function pensadores() {
+    $('.modal-backdrop').hide()
+
     $("button.back").click(function () {
       updateSectionAJAX("index")
     })
@@ -160,8 +166,8 @@ function etica() {
   function updateSectionAJAX(name) {
     $.ajaxSetup ({ cache: false });
 
-    var ajax_load = "<img class='centeredX' style='background-color: #FFEFCD; width: 100%;' src='img/loading.gif' alt='Carregando...' />";
-
+    var ajax_load = "<img class='centered' style='background-color: #FFEFCD;' src='img/loading.gif' alt='Carregando...' />";
+    
     var loadUrl = "views/"+name+".html";
 
     $("main").html(ajax_load).load(loadUrl, function(){

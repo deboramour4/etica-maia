@@ -115,15 +115,130 @@ h4 { font-family: souses-bold }
 .btn-primary {color: #fff;background-color: #8B5E3C;border-color: #8B5E3C;}
 .btn-primary:hover {background-color: #802A18;border-color: #8B5E3C;}
 
+#expansao .modal-dialog {width: 60%;}
 .modal-content {background-color: #FFEFCD;color: #802A18;}
+.modal-content img {width: 100%;}
 .modal-content h1 { font-family: souses-bold; font-size: 2vw; }
-.modal-footer { border-top: 1px solid #802A18;}
-.modal-header { border-bottom: 0px solid #802A18;}
+.modal-header { border-bottom: 1px solid #802A18;}
+.modal-body { font-size: 1.5vw }
+.modal-footer { border-top: 0px solid #802A18; }
 
-.close { box-shadow: none;}
+.close { box-shadow: none; position: absolute; top: 3%;right: 3%;}
 .close:hover { background-color: transparent;}
 .close:hover span {padding-right: 0;}
 .close:hover span:after { opacity: 0; right: 0;}
+
+
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.lds-spinner {
+  position: relative;
+}
+.lds-spinner div {
+  left: 92px;
+  top: 34px;
+  position: absolute;
+  -webkit-animation: lds-spinner linear 2.6s infinite;
+  animation: lds-spinner linear 2.6s infinite;
+  background: #813d25;
+  width: 16px;
+  height: 24px;
+  border-radius: 60%;
+  -webkit-transform-origin: 8px 66px;
+  transform-origin: 8px 66px;
+}
+.lds-spinner div:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-animation-delay: -2.383333333333333s;
+  animation-delay: -2.383333333333333s;
+}
+.lds-spinner div:nth-child(2) {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-animation-delay: -2.166666666666667s;
+  animation-delay: -2.166666666666667s;
+}
+.lds-spinner div:nth-child(3) {
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+  -webkit-animation-delay: -1.95s;
+  animation-delay: -1.95s;
+}
+.lds-spinner div:nth-child(4) {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-animation-delay: -1.733333333333333s;
+  animation-delay: -1.733333333333333s;
+}
+.lds-spinner div:nth-child(5) {
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+  -webkit-animation-delay: -1.516666666666667s;
+  animation-delay: -1.516666666666667s;
+}
+.lds-spinner div:nth-child(6) {
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+  -webkit-animation-delay: -1.3s;
+  animation-delay: -1.3s;
+}
+.lds-spinner div:nth-child(7) {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-animation-delay: -1.083333333333333s;
+  animation-delay: -1.083333333333333s;
+}
+.lds-spinner div:nth-child(8) {
+  -webkit-transform: rotate(210deg);
+  transform: rotate(210deg);
+  -webkit-animation-delay: -0.866666666666667s;
+  animation-delay: -0.866666666666667s;
+}
+.lds-spinner div:nth-child(9) {
+  -webkit-transform: rotate(240deg);
+  transform: rotate(240deg);
+  -webkit-animation-delay: -0.65s;
+  animation-delay: -0.65s;
+}
+.lds-spinner div:nth-child(10) {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  -webkit-animation-delay: -0.433333333333333s;
+  animation-delay: -0.433333333333333s;
+}
+.lds-spinner div:nth-child(11) {
+  -webkit-transform: rotate(300deg);
+  transform: rotate(300deg);
+  -webkit-animation-delay: -0.216666666666667s;
+  animation-delay: -0.216666666666667s;
+}
+.lds-spinner div:nth-child(12) {
+  -webkit-transform: rotate(330deg);
+  transform: rotate(330deg);
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.lds-spinner {
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
 
 /* buttons ================================= */
 button {
@@ -204,7 +319,7 @@ button:hover span:after {
 .map-topic-imgs {
 	height: 5vw;
 }
-.costumes {
+.historia {
 	position: absolute;
 	right: 38%;
     top: 5%;
@@ -219,7 +334,7 @@ button:hover span:after {
 	left: 22%;
     top: 21%;
 }
-.historia {
+.costumes {
 	position: absolute;
 	left: 25%;
     top: 35%;
@@ -250,7 +365,7 @@ button:hover span:after {
     bottom: 18%;
 }
 
-button.costumes {
+button.historia {
 	position: absolute;
 	left: 63%;
     top: 10%;
@@ -265,7 +380,7 @@ button.expansao {
 	left: 34%;
     top: 24%;
 }
-button.historia {
+button.costumes {
 	position: absolute;
 	left: 33%;
     top: 38%;
@@ -406,9 +521,39 @@ button + label {
     width: 45%;
     font-size: 1.5vw;
 }
+#expansao .map img {
+    width: 100%;
+}
 #expansao iframe {
     width: 100%;
     height: 100%;
+}
+
+.bola {
+	position: absolute;
+	left: 34%;
+    top: 4%;
+}
+.sol {
+	position: absolute;
+	left: 49%;
+    bottom: -31%;
+}
+.inscricoes {
+	position: absolute;
+	left: 5%;
+    bottom: -26%;
+}
+.cruz{
+	position: absolute;
+	right: 8%;
+    top: 75%;
+
+}
+.palacio {
+	position: absolute;
+	left: 18%;
+    top: 56%;
 }
 /* historia ================================= */
 #historia header img:first-child {
@@ -502,7 +647,7 @@ button + label {
     left: 2%;
     top: 19%;
     height: 72%;
-    width: 90%;
+    width: 97%;
     font-size: 1.5vw;
     overflow: auto;
 }
