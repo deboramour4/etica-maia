@@ -97,10 +97,9 @@ main {
 }
 .top {top: 1%;}
 .bottom{ bottom: 1%;}
-.text {
-    color: #802A18;
-    font-size: 2vw;
-}
+.text { color: #802A18; font-size: 2vw;}
+.subtitle { font-size: 1em; text-align: center;}
+.btn { border-color: transparent; }
 /* sobrescritos ================================= */
 h4 { font-family: souses-bold }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
@@ -356,18 +355,23 @@ button + label {
 #costumes .text {
 	position: absolute;
     left: 2%;
-    top: 19%;
+    top: 20%;
     height: 72%;
-    width: 90%;
+    width: 50%;
     font-size: 1.5vw;
     overflow: auto;
-
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-	-moz-column-count: 2; /* Firefox */
-	column-count: 2;
-	-webkit-column-width: 50%; /* Chrome, Safari, Opera */
-	-moz-column-width: 50%; /* Firefox */
-	column-width: 50%;
+    text-indent: 3em
+}
+#costumes .map {
+	position: absolute;
+    right: 2%;
+    top: 20%;
+    height: 50%;
+    width: 45%;
+    font-size: 1.5vw;
+}
+#costumes #etica-photos {
+    width: 100%;
 }
 /* expansao ================================= */
 #expansao header img:first-child {
@@ -385,24 +389,25 @@ button + label {
 #expansao .text {
 	position: absolute;
     left: 2%;
-    top: 19%;
+    top: 21%;
     height: 72%;
     width: 50%;
     font-size: 1.5vw;
     overflow: auto;
+    text-indent: 3em;
 }
 
 #expansao .map {
 	position: absolute;
     right: 2%;
-    top: 19%;
+    top: 21%;
     height: 50%;
-    width: 40%;
+    width: 45%;
     font-size: 1.5vw;
 }
-
-#expansao #expansao-photos {
+#expansao iframe {
     width: 100%;
+    height: 100%;
 }
 /* historia ================================= */
 #historia header img:first-child {
@@ -420,22 +425,22 @@ button + label {
 #historia .text {
 	position: absolute;
     left: 2%;
-    top: 19%;
+    top: 20%;
     height: 72%;
     width: 50%;
     font-size: 1.5vw;
     overflow: auto;
+    text-indent: 3em
 }
 
 #historia .map {
 	position: absolute;
     right: 2%;
-    top: 19%;
-    height: 72%;
-    width: 40%;
+    top: 20%;
+    height: 50%;
+    width: 45%;
     font-size: 1.5vw;
 }
-
 #historia iframe {
     width: 100%;
     height: 100%;
@@ -568,16 +573,73 @@ button + label {
 #queda .text {
 	position: absolute;
     left: 2%;
+    top: 20%;
+    height: 72%;
+    width: 50%;
+    font-size: 1.5vw;
+    overflow: auto;
+    text-indent: 3em
+}
+
+#queda .map {
+	position: absolute;
+    right: 2%;
+    top: 20%;
+    height: 50%;
+    width: 45%;
+    font-size: 1.5vw;
+}
+#queda iframe {
+    width: 100%;
+    height: 100%;
+}
+/*#queda .text {
+	position: absolute;
+    left: 2%;
     top: 19%;
     height: 72%;
     width: 90%;
     font-size: 1.5vw;
     overflow: auto;
 
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-	-moz-column-count: 2; /* Firefox */
+    -webkit-column-count: 2;
+	-moz-column-count: 2; 
 	column-count: 2;
-	-webkit-column-width: 50%; /* Chrome, Safari, Opera */
-	-moz-column-width: 50%; /* Firefox */
+	-webkit-column-width: 50%; 
+	-moz-column-width: 50%; 
 	column-width: 50%;
+*/
+/* etica ================================= */
+#etica header img:first-child {
+	position: absolute;
+	top: 7%;
+	left: 10%;
+	width: 7vw;
+}
+#etica header img:nth-child(2) {
+	position: absolute;
+	top: 7%;
+	left: 19%;
+	width: 11vw;
+}
+#etica .text {
+	position: absolute;
+    left: 2%;
+    top: 20%;
+    height: 72%;
+    width: 50%;
+    font-size: 1.5vw;
+    overflow: auto;
+    text-indent: 3em
+}
+#etica .map {
+	position: absolute;
+    right: 2%;
+    top: 20%;
+    height: 50%;
+    width: 45%;
+    font-size: 1.5vw;
+}
+#etica #etica-photos {
+    width: 100%;
 }

@@ -147,7 +147,14 @@ function queda() {
 
     toggleSoundSetup()
   }
+// etica =================================
+function etica() {
+    $("button.back").click(function () {
+      updateSectionAJAX("index")
+    })
 
+    toggleSoundSetup()
+  }
 
  // ajax =================================
   function updateSectionAJAX(name) {
