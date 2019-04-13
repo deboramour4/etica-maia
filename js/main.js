@@ -1,23 +1,20 @@
+var isPaused = false
+
 if ($("#index").length) {
   index()
 }
 
 $(document).ready(function() {
-  var aspectRatioProp = window.innerWidth/window.innerHeight
-
-  /*if (aspectRatioProp >= 1.7){ 
-    $("main").css("padding-top", "56.25%")
-  } else {
-    $("main").css("padding-top", "79.25%")
-  }*/
-
-  toggleSoundSetup()
-
   // Toggle fullscreen
     $('#myModal').modal('show')
     $("#openFullscreen").click(function () {
       openFullscreen()
+      playMayaAudio()
       $('#myModal').modal('hide')
+    })
+
+    $(".dismiss-fullscreen").click(function () {
+      playMayaAudio()
     })
 });
 
@@ -35,16 +32,39 @@ $(document).ready(function() {
   }
 
 function toggleSoundSetup() {
+    if (isPaused) {
+      $("#audio").addClass("mute")
+    } else {
+      $("#audio").addClass("sound")
+    }
+
     // Toggle sound
-    $(".sound").click(function () {
+    $("#audio").click(function () {
       $(this).toggleClass("sound")
       $(this).toggleClass("mute")
-      console.log("Inserir logica de mutar o som, aqui!")
+      console.log(isPaused)
+
+      if (isPaused) {
+        playMayaAudio()
+        isPaused = false
+      } else {
+        pauseMayaAudio()
+        isPaused = true
+      }
     })
   }
+function playMayaAudio() {
+  document.getElementById("audio-maya").volume = 0.005;
+  document.getElementById("audio-maya").play()
+}
+function pauseMayaAudio() {
+  document.getElementById("audio-maya").volume = 0.005;
+  document.getElementById("audio-maya").pause()
+}
 
 // index =================================
 function index() {
+    toggleSoundSetup()
     $("button.costumes").click(function () {
       updateSectionAJAX("costumes")
     })

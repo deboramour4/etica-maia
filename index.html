@@ -15,8 +15,12 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<audio id="audio-maya">
+	  <source src="audio/maya.mp3" type="audio/mpeg">
+	</audio>
+
 	<main>
-		<button class="sound"></button>
+		<button id="audio"></button>
 
 		<section class="screen-size-small">
 			<h1>Tamanho da tela pequeno demais</h1>
@@ -69,12 +73,12 @@
 		  <div class="modal-dialog modal-sm" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <button type="button" class="close dismiss-fullscreen" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		        <h4 class="modal-title" id="myModalLabel">Iniciar o modo tela cheia?</h4>
 		        <p>Indicado para melhor visualização.</p>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+		        <button type="button" class="btn btn-default dismiss-fullscreen" data-dismiss="modal">Não</button>
 		        <button id="openFullscreen" type="button" class="btn btn-primary">Sim</button>
 		      </div>
 		    </div>
