@@ -128,6 +128,7 @@ h4 { font-family: souses-bold }
 .close:hover span {padding-right: 0;}
 .close:hover span:after { opacity: 0; right: 0;}
 
+.carousel-inner>.item>img { width: 100%; }
 
 @keyframes lds-spinner {
   0% {

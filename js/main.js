@@ -54,11 +54,11 @@ function toggleSoundSetup() {
     })
   }
 function playMayaAudio() {
-  document.getElementById("audio-maya").volume = 0.005;
+  document.getElementById("audio-maya").volume = 0.01;
   document.getElementById("audio-maya").play()
 }
 function pauseMayaAudio() {
-  document.getElementById("audio-maya").volume = 0.005;
+  document.getElementById("audio-maya").volume = 0.01;
   document.getElementById("audio-maya").pause()
 }
 
